@@ -1,4 +1,4 @@
-import classNames from 'classnames-ts'
+import classNames from 'classnames'
 import { FC } from 'react'
 import { ContentProps } from '../../utils/types'
 

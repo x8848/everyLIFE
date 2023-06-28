@@ -18,7 +18,7 @@ const App = () => {
       if (response.statusText === 'OK') {
         const data = await response.json()
         setTasks(data)
-        return []
+        return data
       }
     }
   })

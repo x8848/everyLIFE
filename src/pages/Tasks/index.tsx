@@ -23,7 +23,7 @@ const Tasks = () => {
   }, [])
 
   const getFilteredTasks = (value: string) => {
-    const lowerCase = value.toLocaleLowerCase()
+    const lowerCase = value.toLocaleLowerCase().trim()
     return tasks.filter(
       ({ name, description }) =>
         name.toLocaleLowerCase().includes(lowerCase) || description.toLocaleLowerCase().includes(lowerCase)

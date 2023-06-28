@@ -15,7 +15,7 @@ const TaskItem: FC<TaskProps> = ({ task }) => {
     <div className='task-item' key={id}>
       <h3>{name}</h3>
       <div className='type'>
-        Type: <TaskIcon type={type} /> {type}
+        Type: <TaskIcon type={type} /> <span>{type}</span>
       </div>
       <div className='description'>{description}</div>
       <button onClick={() => navigate(url)}>Edit</button>
