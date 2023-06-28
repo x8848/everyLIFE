@@ -1,0 +1,8 @@
+.content {
+  margin: 0 auto;
+  padding: 30px 110px;
+  max-width: $desktop;
+  @include tablet {
+    padding: 20px 24px;
+  }
+}

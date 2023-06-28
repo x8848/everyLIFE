@@ -1,0 +1,40 @@
+$tablet: 768px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (max-width: ($desktop - 1)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: ($tablet - 1)) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@import './components/Content/style.scss';
+@import './pages/Tasks/style.scss';
