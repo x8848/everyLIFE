@@ -17,3 +17,7 @@ export interface Task {
   description: string
   type: TaskType
 }
+
+export interface TaskProps {
+  task: Task
+}

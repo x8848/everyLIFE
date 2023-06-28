@@ -1,5 +1,5 @@
 $tablet: 768px;
-$desktop: 1200px;
+$desktop: 1320px;
 
 @mixin tablet {
   @media (max-width: ($desktop - 1)) {
@@ -29,6 +29,10 @@ input {
   padding: 5px;
 }
 
+textarea {
+  padding: 10px;
+}
+
 button {
   padding: 5px;
   &:hover {
@@ -37,4 +41,6 @@ button {
 }
 
 @import './components/Content/style.scss';
+
 @import './pages/Tasks/style.scss';
+@import './pages/TaskEdit/style.scss';

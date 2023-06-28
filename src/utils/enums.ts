@@ -1,6 +1,6 @@
 export enum Path {
   Root = '/',
-  Task = '/task/:id'
+  TaskEdit = '/task/:id'
 }
 
 export enum TaskType {

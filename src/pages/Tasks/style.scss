@@ -1,7 +1,7 @@
 .tasks {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   .search {
     display: flex;
     align-items: center;
@@ -41,5 +41,37 @@
     }
   }
   .tasks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    @include mobile {
+      gap: 30px;
+    }
+    .task-item {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      padding: 20px;
+      width: 330px;
+      @include mobile {
+        width: 100%;
+      }
+      .type {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        img {
+          padding: 10px;
+        }
+      }
+      .description {
+        flex-grow: 1;
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
   }
 }

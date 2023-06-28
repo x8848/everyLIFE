@@ -6,7 +6,7 @@ import { TasksContext } from '../../utils'
 import { Path } from '../../utils/enums'
 import { Task } from '../../utils/types'
 
-const TaskDetails = () => {
+const TaskEdit = () => {
   const navigate = useNavigate()
   const { tasks, setTasks } = useContext(TasksContext)
 
@@ -27,24 +27,27 @@ const TaskDetails = () => {
   }
 
   return (
-    <Content className='task-details'>
-      <h1>TASK DETAILS</h1>
-      <div>
-        <div>ID: {task.id}</div>
-        <div>
-          Type: {task.type} <TaskIcon type={task.type} />
+    <Content className='task-edit'>
+      <h1>EDIT TASK</h1>
+      <div className='task'>
+        <div className='type'>
+          <h4>Type:</h4> <TaskIcon type={task.type} /> {task.type}
         </div>
-        <div>Name:</div>
+        <h3>Name:</h3>
         <textarea value={task.name} onChange={e => setTask({ ...task, name: e.target.value })}></textarea>
-        <div>Description:</div>
-        <textarea value={task.description} onChange={e => setTask({ ...task, description: e.target.value })}></textarea>
-        <div>
-          <button onClick={saveTask}>Save</button>
-          <button onClick={deleteTask}>Delete</button>
-        </div>
+        <h3>Description:</h3>
+        <textarea
+          value={task.description}
+          onChange={e => setTask({ ...task, description: e.target.value })}
+          rows={6}
+        ></textarea>
+        <button onClick={saveTask}>Save</button>
+        <button onClick={deleteTask} className='delete-button'>
+          Delete
+        </button>
       </div>
     </Content>
   )
 }
 
-export default TaskDetails
+export default TaskEdit

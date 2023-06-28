@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import TaskDetails from './pages/TaskDetails'
+import TaskEdit from './pages/TaskEdit'
 import Tasks from './pages/Tasks'
 import { TasksContext } from './utils'
 import { API_TASKS_URL } from './utils/constants'
@@ -32,7 +32,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path={Path.Root} element={<Tasks />} />
-          <Route path={Path.Task} element={<TaskDetails />} />
+          <Route path={Path.TaskEdit} element={<TaskEdit />} />
         </Routes>
       </BrowserRouter>
     </TasksContext.Provider>
