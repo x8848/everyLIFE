@@ -67,10 +67,10 @@ const Tasks = () => {
         <button onClick={searchTasks}>Search</button>
         <button onClick={resetFilters}>Reset All Filters</button>
       </div>
-      <div className='type-radios'>
+      <div className='filter'>
         <h4>Filter by Type:</h4>
         {types.map(type => (
-          <div key={type} className='type-radio' onClick={() => filterTasks(type)}>
+          <div key={type} className='type' onClick={() => filterTasks(type)}>
             <input type='radio' id={type} value={type} name='type' checked={type === typeSelected} readOnly />
             <TaskIcon type={type} />
             <label htmlFor={type}>{type}</label>

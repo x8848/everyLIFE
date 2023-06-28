@@ -30,11 +30,11 @@ const TaskEdit = () => {
     <Content className='task-edit'>
       <h1>EDIT TASK</h1>
       <div className='task'>
+        <h3>Name:</h3>
+        <textarea value={task.name} onChange={e => setTask({ ...task, name: e.target.value })}></textarea>
         <div className='type'>
           <h4>Type:</h4> <TaskIcon type={task.type} /> {task.type}
         </div>
-        <h3>Name:</h3>
-        <textarea value={task.name} onChange={e => setTask({ ...task, name: e.target.value })}></textarea>
         <h3>Description:</h3>
         <textarea
           value={task.description}
@@ -42,7 +42,7 @@ const TaskEdit = () => {
           rows={6}
         ></textarea>
         <button onClick={saveTask}>Save</button>
-        <button onClick={deleteTask} className='delete-button'>
+        <button onClick={deleteTask} className='delete'>
           Delete
         </button>
       </div>
