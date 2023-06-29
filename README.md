@@ -1,3 +1,26 @@
+# everyLIFE
+
+## Development
+
+`yarn dev` - start local development server
+
+## Build
+
+`yarn build` - make production build into `dist` folder
+`yarn preview` - start local production build server
+
+## Tests
+
+Start local server with `yarn dev` or `yarn preview` before running tests
+`yarn test` - run headless e2e tests against development server
+`yarn test:build` - run headless e2e tests against production build server
+`yarn cypress:open` - open cypress launchpad
+
+## Other commands
+
+`yarn lint` - run eslint
+`yarn prettier` - run prettier
+
 ## Technical task
 
 Create a React SPA to fetch and display the tasks using the following API: `https://adam-deleteme.s3.amazonaws.com/tasks.json`

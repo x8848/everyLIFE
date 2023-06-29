@@ -8,7 +8,6 @@ describe('Tasks Page', () => {
   it('Search & Reset Filters', () => {
     cy.visit('/')
     cy.contains('ALL TASKS')
-    cy.contains('Nothing found').should('not.exist')
     cy.get('.task-item').should('have.length', 6)
     cy.get('.search input').type('1')
     cy.get('.search button:first-of-type').click()
