@@ -43,7 +43,7 @@
   .tasks {
     margin-top: 20px;
     display: grid;
-    grid: 'x x x';
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     @include tablet {
       grid: 'x x';

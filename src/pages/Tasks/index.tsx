@@ -1,7 +1,8 @@
 import { KeyboardEvent, useContext, useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import Content from '../../components/Content'
 import TaskIcon from '../../components/TaskIcon'
-import { TasksContext, getUrlSearchParam, setUrlSearchParam } from '../../utils'
+import { TasksContext } from '../../utils'
 import { SEARCH_URL_PARAM } from '../../utils/constants'
 import { TaskType } from '../../utils/enums'
 import { Task } from '../../utils/types'
@@ -9,13 +10,14 @@ import TaskItem from './TaskItem'
 
 const Tasks = () => {
   const { tasks } = useContext(TasksContext)
+  const [searchParams, setSearchParams] = useSearchParams()
 
   const [searchInput, setSearchInput] = useState('')
   const [typeSelected, setTypeSelected] = useState<TaskType>()
   const [filteredTasks, setFilteredTasks] = useState<Task[]>(tasks)
 
   useEffect(() => {
-    const input = getUrlSearchParam(SEARCH_URL_PARAM)
+    const input = searchParams.get(SEARCH_URL_PARAM)
     if (input) {
       setSearchInput(input)
       setFilteredTasks(searchTasks(input))
@@ -33,7 +35,7 @@ const Tasks = () => {
   const search = () => {
     if (searchInput) {
       if (typeSelected) setTypeSelected(undefined)
-      setUrlSearchParam(SEARCH_URL_PARAM, searchInput)
+      setSearchParams({ [SEARCH_URL_PARAM]: searchInput })
       setFilteredTasks(searchTasks(searchInput))
     }
   }
@@ -46,7 +48,7 @@ const Tasks = () => {
 
   const filterTasks = (type: TaskType) => {
     setSearchInput('')
-    setUrlSearchParam(SEARCH_URL_PARAM, '')
+    setSearchParams(undefined)
     setTypeSelected(type)
     setFilteredTasks(tasks.filter(task => task.type === type))
   }
@@ -54,7 +56,7 @@ const Tasks = () => {
   const resetFilters = () => {
     setSearchInput('')
     setTypeSelected(undefined)
-    setUrlSearchParam(SEARCH_URL_PARAM, '')
+    setSearchParams(undefined)
     setFilteredTasks(tasks)
   }
 
