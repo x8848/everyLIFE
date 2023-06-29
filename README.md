@@ -2,24 +2,25 @@
 
 ## Development
 
-`yarn dev` - start local development server
+- `yarn dev` - start local development server
 
 ## Build
 
-`yarn build` - make production build into `dist` folder
-`yarn preview` - start local production build server
+- `yarn build` - make production build into `dist` folder
+- `yarn preview` - start local production server
 
-## Tests
+## Test
 
 Start local server with `yarn dev` or `yarn preview` before running tests
-`yarn test` - run headless e2e tests against development server
-`yarn test:build` - run headless e2e tests against production build server
-`yarn cypress:open` - open cypress launchpad
 
-## Other commands
+- `yarn test` - run headless e2e tests against local development server
+- `yarn test:build` - run headless e2e tests against local production server
+- `yarn cypress:open` - open cypress launchpad
 
-`yarn lint` - run eslint
-`yarn prettier` - run prettier
+## Tools
+
+- `yarn lint` - run eslint
+- `yarn prettier` - run prettier
 
 ## Technical task
 
