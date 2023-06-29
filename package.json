@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "prettier": "npx prettier --write '**/*.{js,ts,tsx,html,css,scss,less,json,yml,yaml,md,mdx}'",
+    "prettier": "npx prettier --write '**/*.*' --ignore-unknown",
     "test": "yarn cypress run",
     "test:build": "yarn cypress run --config baseUrl=http://127.0.0.1:4173",
     "cypress:open": "yarn run cypress open"
