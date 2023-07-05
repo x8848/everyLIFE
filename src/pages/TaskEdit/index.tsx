@@ -4,7 +4,6 @@ import Content from '../../components/Content'
 import TaskIcon from '../../components/TaskIcon'
 import { TasksContext } from '../../utils'
 import { Path } from '../../utils/enums'
-import { Task } from '../../utils/types'
 
 const TaskEdit = () => {
   const navigate = useNavigate()
@@ -12,7 +11,7 @@ const TaskEdit = () => {
 
   const id = Number(useParams().id)
 
-  const [task, setTask] = useState<Task | undefined>(tasks.find(task => id === task.id))
+  const [task, setTask] = useState(tasks.find(task => id === task.id))
 
   if (!task) return <div>Not Found</div>
 
