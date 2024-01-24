@@ -1,5 +1,7 @@
 # everyLIFE
 
+<img width="1157" alt="image" src="https://github.com/x8848/everyLIFE/assets/3659233/eb937338-9732-489c-bbb2-929bfc81ecff">
+
 ## Development
 
 - `yarn dev` - start local development server
