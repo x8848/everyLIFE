@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+
   .task {
     display: flex;
     flex-direction: column;
@@ -10,18 +11,23 @@
     padding: 20px;
     width: 550px;
     gap: 20px;
+
     @include mobile {
       width: 100%;
     }
+
     .type {
       display: flex;
       align-items: center;
+
       img {
         padding: 0 10px;
       }
     }
+
     button {
       display: block;
+
       &.delete {
         color: red;
       }

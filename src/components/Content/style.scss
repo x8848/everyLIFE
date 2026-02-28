@@ -2,6 +2,7 @@
   margin: 0 auto;
   padding: 40px 110px;
   max-width: $desktop;
+
   @include tablet {
     padding: 40px 24px;
   }
